@@ -2,16 +2,16 @@ import json
 import requests
 
 
-def test_simpele_get():
-    url = "http://localhost:8080/user/1"
+def test_get_naar_niet_bestaand_account():
+    url = "http://localhost:8080/user/10"
     headers = {
         'Content-Type': 'application/json'
     }
     response = requests.get(url, headers=headers, timeout=3)
-    assert response.status_code == 200
+    assert response.status_code == 500
     data = json.loads(response.content)
-    assert data["lastname"] == "MacDonald"
+    assert data["message"] == "No value present"
     print(response.text)
 
 
-test_simpele_get()
+test_get_naar_niet_bestaand_account()
