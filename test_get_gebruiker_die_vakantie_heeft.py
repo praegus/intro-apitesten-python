@@ -11,6 +11,7 @@ def test_get_gebruiker_die_vakantie_heeft():
     assert response.status_code == 200
     data = json.loads(response.content)
     assert data["lastname"] == "MacDonald"
+    assert data["reservation"]["startDate"] == "2021-03-11"
     print(response.text)
 
 
