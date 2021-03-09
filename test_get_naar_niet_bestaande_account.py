@@ -2,7 +2,7 @@ import json
 import requests
 
 
-def test_simpele_foutieve_get():
+def test_get_naar_niet_bestaand_account():
     url = "http://localhost:8080/user/10"
     headers = {
         'Content-Type': 'application/json'
@@ -14,4 +14,4 @@ def test_simpele_foutieve_get():
     print(response.text)
 
 
-test_simpele_foutieve_get()
+test_get_naar_niet_bestaand_account()

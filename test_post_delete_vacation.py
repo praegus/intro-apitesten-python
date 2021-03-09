@@ -4,7 +4,7 @@ import json
 
 def test_delete_vacation():
     url = "http://localhost:8080/user/delete/1"
-    payload = {"dateRange": "2021-02-11 tot 2021-02-14"}
+    payload = {"dateRange": "2021-03-11 tot 2021-03-14"}
     headers = {
         'Content-Type': 'application/json'
     }
