@@ -7,7 +7,7 @@ base_url = "http://localhost:3001"
 
 
 def test_get_niet_bestaande_booking():
-    url = base_url + "/booking/?"
+    url = base_url + "/booking/q"
     headers = {
         'Content-Type': 'application/json'
     }
