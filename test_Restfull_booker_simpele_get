@@ -16,8 +16,8 @@ def test_get_booking():
     data = json.dumps(response.json())
     # omdat het 1 grote string is moeten we deze slicen
     assertion = data[3:12]
-    print(assertion)
     assert assertion == "bookingid"
+    print(assertion)
 
 
 test_get_booking()
