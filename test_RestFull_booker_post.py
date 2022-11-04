@@ -24,7 +24,7 @@ def test_post_booking():
     response = requests.post(url, headers=headers, json=payload, timeout=3)
     assert response.status_code == 200
     data = json.loads(response.content)
-    assert data == "booking"
+    assert data["booking"]
     print(response.text)
 
 
