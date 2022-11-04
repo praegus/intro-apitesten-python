@@ -5,19 +5,16 @@ base_url = "http://localhost:3001"
 
 
 def test_get_booking():
-    url = base_url + "/booking"
+    url = base_url + "/booking/6"
     headers = {
         'Content-Type': 'application/json'
     }
     response = requests.get(url, headers=headers, timeout=3)
     assert response.status_code == 200
-    # Wij moeten deze response omvormen naar een string en daarvoor gebruiken we json.dumps methode
-    # Omdat het response meerder bookingsids hebben moeten we de json tussen haakjes zetten
-    data = json.dumps(response.json())
-    # omdat het 1 grote string is moeten we deze slicen
-    assertion = data[3:12]
-    assert assertion == "bookingid"
-    print(assertion)
+
+    data = json.loads(response.content)
+    assert data["firstname"] == "Mary"
+    print(response.content)
 
 
 test_get_booking()
