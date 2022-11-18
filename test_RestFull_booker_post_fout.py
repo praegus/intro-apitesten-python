@@ -1,3 +1,4 @@
+# bij deze test krijg je geen goed response terug daarom moeilijk testbaar
 import requests
 import json
 
@@ -24,7 +25,7 @@ def test_post_booking():
     # voor een of andere reden maakt hij hiervan een 500 terwijl in postman maakt hij er een 400 van
     assert response.status_code == 500
     data = json.loads(response.content)
-    print(response.text)
+    print(data)
 
 
 test_post_booking()
