@@ -4,7 +4,7 @@ import json
 base_url = "http://localhost:3001"
 
 
-def test_post_booking():
+def test_post_user():
     url = base_url + "/auth"
     headers = {
         'Content-Type': 'application/json'
@@ -20,4 +20,4 @@ def test_post_booking():
     print(response.text)
 
 
-test_post_booking()
+test_post_user()
